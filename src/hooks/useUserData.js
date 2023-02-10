@@ -35,7 +35,7 @@ const useUserData = () => {
                 setUserData(data.data);
                 setUserName(data.data.userInfos.firstName);
                 setUserMacros(data.data.keyData);
-                setUserScore(data.data.todayScore);
+                setUserScore(data.data.todayScore || data.data.score);
                 setError(null);
             })
             .catch(err => {
